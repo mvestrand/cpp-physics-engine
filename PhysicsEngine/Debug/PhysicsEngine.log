@@ -1,0 +1,45 @@
+﻿Build started 4/29/2015 12:16:58 AM.
+     1>Project "C:\Users\Max\documents\visual studio 2013\Projects\PhysicsEngine\PhysicsEngine\PhysicsEngine.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\PhysicsEngine.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp
+         Main.cpp
+     1>c:\users\max\documents\visual studio 2013\projects\physicsengine\physicsengine\grid2d.h(213): warning C4018: '>=' : signed/unsigned mismatch
+                 c:\users\max\documents\visual studio 2013\projects\physicsengine\physicsengine\grid2d.h(206) : while compiling class template member function 'int Grid2d<int>::get(int,int)'
+                 c:\users\max\documents\visual studio 2013\projects\physicsengine\physicsengine\main.cpp(27) : see reference to function template instantiation 'int Grid2d<int>::get(int,int)' being compiled
+                 c:\users\max\documents\visual studio 2013\projects\physicsengine\physicsengine\main.cpp(9) : see reference to class template instantiation 'Grid2d<int>' being compiled
+     1>c:\users\max\documents\visual studio 2013\projects\physicsengine\physicsengine\grid2d.h(219): warning C4018: '>=' : signed/unsigned mismatch
+     1>c:\users\max\documents\visual studio 2013\projects\physicsengine\physicsengine\grid2d.h(232): warning C4018: '>=' : signed/unsigned mismatch
+     1>c:\users\max\documents\visual studio 2013\projects\physicsengine\physicsengine\grid2d.h(246): warning C4018: '>=' : signed/unsigned mismatch
+     1>c:\users\max\documents\visual studio 2013\projects\physicsengine\physicsengine\grid2d.h(252): warning C4018: '>=' : signed/unsigned mismatch
+     1>c:\users\max\documents\visual studio 2013\projects\physicsengine\physicsengine\grid2d.h(265): warning C4018: '>=' : signed/unsigned mismatch
+     1>c:\users\max\documents\visual studio 2013\projects\physicsengine\physicsengine\grid2d.h(121): warning C4018: '>=' : signed/unsigned mismatch
+                 c:\users\max\documents\visual studio 2013\projects\physicsengine\physicsengine\grid2d.h(115) : while compiling class template member function 'void Grid2d<int>::set(int,int,T)'
+                 with
+                 [
+                     T=int
+                 ]
+                 c:\users\max\documents\visual studio 2013\projects\physicsengine\physicsengine\main.cpp(22) : see reference to function template instantiation 'void Grid2d<int>::set(int,int,T)' being compiled
+                 with
+                 [
+                     T=int
+                 ]
+     1>c:\users\max\documents\visual studio 2013\projects\physicsengine\physicsengine\grid2d.h(127): warning C4018: '>=' : signed/unsigned mismatch
+     1>c:\users\max\documents\visual studio 2013\projects\physicsengine\physicsengine\grid2d.h(145): warning C4018: '>=' : signed/unsigned mismatch
+     1>c:\users\max\documents\visual studio 2013\projects\physicsengine\physicsengine\grid2d.h(163): warning C4018: '>=' : signed/unsigned mismatch
+     1>c:\users\max\documents\visual studio 2013\projects\physicsengine\physicsengine\grid2d.h(169): warning C4018: '>=' : signed/unsigned mismatch
+     1>c:\users\max\documents\visual studio 2013\projects\physicsengine\physicsengine\grid2d.h(186): warning C4018: '>=' : signed/unsigned mismatch
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Max\documents\visual studio 2013\Projects\PhysicsEngine\Debug\PhysicsEngine.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Max\documents\visual studio 2013\Projects\PhysicsEngine\Debug\PhysicsEngine.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Max\documents\visual studio 2013\Projects\PhysicsEngine\Debug\PhysicsEngine.lib" /MACHINE:X86 Debug\Grid2d.obj
+         Debug\Main.obj
+         Debug\MultiResGrid.obj
+         Debug\PhysicsWorld.obj
+         Debug\RigidBody.obj
+         Debug\SpatialGrid2d.obj
+         Debug\SphereBVH.obj
+         Debug\stdafx.obj
+         PhysicsEngine.vcxproj -> C:\Users\Max\documents\visual studio 2013\Projects\PhysicsEngine\Debug\PhysicsEngine.exe
+     1>Done Building Project "C:\Users\Max\documents\visual studio 2013\Projects\PhysicsEngine\PhysicsEngine\PhysicsEngine.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.58
