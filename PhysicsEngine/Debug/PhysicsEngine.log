@@ -1,7 +1,7 @@
-﻿Build started 4/29/2015 12:16:58 AM.
+﻿Build started 4/30/2015 5:25:35 PM.
      1>Project "C:\Users\Max\documents\visual studio 2013\Projects\PhysicsEngine\PhysicsEngine\PhysicsEngine.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\PhysicsEngine.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\PhysicsEngine.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Grid2d.cpp Main.cpp
          Main.cpp
      1>c:\users\max\documents\visual studio 2013\projects\physicsengine\physicsengine\grid2d.h(213): warning C4018: '>=' : signed/unsigned mismatch
                  c:\users\max\documents\visual studio 2013\projects\physicsengine\physicsengine\grid2d.h(206) : while compiling class template member function 'int Grid2d<int>::get(int,int)'
@@ -28,6 +28,9 @@
      1>c:\users\max\documents\visual studio 2013\projects\physicsengine\physicsengine\grid2d.h(163): warning C4018: '>=' : signed/unsigned mismatch
      1>c:\users\max\documents\visual studio 2013\projects\physicsengine\physicsengine\grid2d.h(169): warning C4018: '>=' : signed/unsigned mismatch
      1>c:\users\max\documents\visual studio 2013\projects\physicsengine\physicsengine\grid2d.h(186): warning C4018: '>=' : signed/unsigned mismatch
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         Grid2d.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Max\documents\visual studio 2013\Projects\PhysicsEngine\Debug\PhysicsEngine.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Max\documents\visual studio 2013\Projects\PhysicsEngine\Debug\PhysicsEngine.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Max\documents\visual studio 2013\Projects\PhysicsEngine\Debug\PhysicsEngine.lib" /MACHINE:X86 Debug\Grid2d.obj
          Debug\Main.obj
@@ -42,4 +45,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.58
+Time Elapsed 00:00:12.29

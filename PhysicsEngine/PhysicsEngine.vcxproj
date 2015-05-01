@@ -79,8 +79,9 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AxisSortedList.h" />
     <ClInclude Include="ForceGenerator.h" />
-    <ClInclude Include="Grid2d.h" />
+    <ClInclude Include="PointerGrid2d.h" />
     <ClInclude Include="MultiResGrid.h" />
     <ClInclude Include="PhysicsMath.h" />
     <ClInclude Include="PhysicsWorld.h" />
@@ -91,6 +92,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AxisSortedList.cpp" />
     <ClCompile Include="Grid2d.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MultiResGrid.cpp" />
