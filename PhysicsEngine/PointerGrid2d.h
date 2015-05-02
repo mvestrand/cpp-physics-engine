@@ -52,6 +52,14 @@ public:
 		else {
 			PointerGridChunk<T> *tmp = objPool.front();
 			objPool.pop_front();
+			if (tmp->count > 0) {
+				for (int i = 0; i < X_CHUNK_SIZE; i++) {
+					for (int j = 0; j < Y_CHUNK_SIZE; j++) {
+						tmp->contents[i][j] = NULL;
+					}
+				}
+				tmp->count = 0;
+			}
 			return tmp;
 		}
 	}
@@ -108,6 +116,19 @@ PointerGrid2d<T>::~PointerGrid2d()
 			}
 		}
 	}
+	for (vector_pair pair : negative) {
+		for (PointerGridChunk<T> *chunk : pair.positive) {
+			if (chunk != NULL) {
+				PointerGridChunk<T>::deleteChunk(chunk);
+			}
+		}
+		for (PointerGridChunk<T> *chunk : pair.negative) {
+			if (chunk != NULL) {
+				PointerGridChunk<T>::deleteChunk(chunk);
+			}
+		}
+	}
+
 }
 
 template <class T>

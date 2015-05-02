@@ -1,12 +1,12 @@
 #include "stdafx.h"
 
-#include "Grid2d.h"
+#include "PointerGrid3d.h"
 
 int main(int argc, char **argv)
 {
-	int x, y, val;
+	int x, y, z, val;
 
-	Grid2d<int> *grid = new Grid2d < int >;
+	PointerGrid3d<int> *grid = new PointerGrid3d < int >;
 	bool run = true;
 	while (run) {
 		int opt = 0;
@@ -15,16 +15,16 @@ int main(int argc, char **argv)
 
 		switch (opt) {
 		case 1:
-			printf("x and y: ");
-			scanf_s("%d %d", &x, &y);
+			printf("x y z: ");
+			scanf_s("%d %d %d", &x, &y, &z);
 			printf("value: ");
 			scanf_s("%d", &val);
-			grid->set(x, y, val);
+			grid->set(x, y, z, val);
 			break;
 		case 2:
-			printf("x and y: ");
-			scanf_s("%d %d", &x, &y);
-			printf("(%d,%d) = %d\n", x, y, grid->get(x, y));
+			printf("x y z: ");
+			scanf_s("%d %d %d", &x, &y, &z);
+			printf("(%d,%d,%d) = %d\n", x, y, z, grid->get(x, y, z));
 			break;
 		default:
 			run = false;
@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 	}
 
 	delete grid;
-	GridChunk<int>::deletePool();
+	PointerGridChunk3d<int>::deletePool();
 
 	return 0;
 }

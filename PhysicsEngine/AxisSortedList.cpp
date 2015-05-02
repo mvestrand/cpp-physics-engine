@@ -37,7 +37,7 @@ void AxisSortedList::generateCollisions(std::unordered_set<CollisionPair> collis
 
 		/* Remove inactive objects */
 		for (auto j = activeObjects.begin(); j != activeObjects.end();) {
-			if (pos - radius > (*j)->getCenter.SORT_AXIS + (*j)->getRadius()) {
+			if (pos - radius > (*j)->getCenter().SORT_AXIS + (*j)->getRadius()) {
 				j = activeObjects.erase(j);
 			}
 			else {

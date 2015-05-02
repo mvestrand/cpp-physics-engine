@@ -85,6 +85,7 @@
     <ClInclude Include="MultiResGrid.h" />
     <ClInclude Include="PhysicsMath.h" />
     <ClInclude Include="PhysicsWorld.h" />
+    <ClInclude Include="PointerGrid3d.h" />
     <ClInclude Include="RigidBody.h" />
     <ClInclude Include="SpatialGrid2d.h" />
     <ClInclude Include="SphereBVH.h" />
@@ -93,7 +94,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AxisSortedList.cpp" />
-    <ClCompile Include="Grid2d.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MultiResGrid.cpp" />
     <ClCompile Include="PhysicsWorld.cpp" />

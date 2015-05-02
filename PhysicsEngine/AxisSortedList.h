@@ -11,8 +11,8 @@
 
 class CollidableSphere {
 public:
-	vec3 getCenter();
-	real getRadius();
+	virtual vec3 getCenter() = 0;
+	virtual real getRadius() = 0;
 };
 
 class CollisionPair {
@@ -29,13 +29,29 @@ public:
 		}
 	}
 
+	inline bool operator==(const CollisionPair &other) const {
+		return (a == other.a && b == other.b);
+	}
+
 	CollidableSphere *a;
 	CollidableSphere *b;
 };
 
-inline bool operator==(CollisionPair const& lhs, CollisionPair const& rhs) {
-	return (lhs.a == rhs.a && lhs.b == rhs.b);
+namespace std
+{
+	template <>
+	struct hash < CollisionPair >
+	{
+		size_t operator() (const CollisionPair& k) const
+		{
+			return ((hash<void*>()(k.a)) ^ (hash<void*>()(k.b) << 1) >> 1);
+		}
+	};
 }
+
+//inline bool operator==(CollisionPair const& lhs, CollisionPair const& rhs) {
+//	return (lhs.a == rhs.a && lhs.b == rhs.b);
+//}
 
 class AxisSortedList
 {
