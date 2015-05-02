@@ -8,3 +8,8 @@
 *.tlog
 *.lastbuildstate
 *.idb
+*successfulbuild
+*.sdf
+*.suo
+*.opensdf
+*.ipch
