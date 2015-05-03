@@ -28,7 +28,7 @@ void AxisSortedList::sort()
 	}
 }
 
-void AxisSortedList::generateCollisions(std::unordered_set<CollisionPair> collisions)
+void AxisSortedList::generateCollisions(std::unordered_set<CollisionPair> &collisions)
 {
 	std::vector<CollidableSphere *> activeObjects;
 	for (auto it = axis.begin(); it != axis.end(); it++) {
