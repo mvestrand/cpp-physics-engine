@@ -17,7 +17,7 @@
 //	return (lhs.a == rhs.a && lhs.b == rhs.b);
 //}
 
-class AxisSortedList : public CollisionTester
+class AxisSortedList
 {
 public:
 	AxisSortedList();
@@ -34,6 +34,8 @@ public:
 	void removeObject(CollisionObject *obj);
 	unsigned int getObjectCount();
 
+	static AxisSortedList *newInstance() { return new AxisSortedList; }
+	static AxisSortedList *deleteInstance(AxisSortedList *inst) { delete inst; }
 
 	std::vector<CollisionObject *> axis;
 };
