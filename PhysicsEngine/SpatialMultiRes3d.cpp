@@ -95,7 +95,7 @@ CollisionTester *SpatialMultiRes3d::addTester(int x, int y, int z, int layer)
 {
 	assert(layers[layer].get(x, y, z) == NULL);
 
-	CollisionTester *tester = CollisionTester::newTester();
+	CollisionTester *tester = CollisionTester::newInstance();
 	layers[layer].set(x, y, z, tester);
 	active[layer].emplace(tester, vec3(x, y, z));
 	return tester;
@@ -107,7 +107,7 @@ void SpatialMultiRes3d::removeTester(int x, int y, int z, int layer, CollisionTe
 
 	layers[layer].set(x, y, z, NULL);
 	active[layer].erase(tester);
-	CollisionTester::deleteTester(tester);
+	CollisionTester::deleteInstance(tester);
 }
 
 
