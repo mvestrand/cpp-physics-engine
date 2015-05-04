@@ -113,8 +113,8 @@ void SpatialMultiRes3d::removeTester(int x, int y, int z, int layer, CollisionTe
 
 
 void SpatialMultiRes3d::getComplements(std::vector<vec3> &v1, std::vector<vec3> &v2,
-	std::vector<vec3> &comp1, std::vector<vec3> &comp2) {
-
+	std::vector<vec3> &comp1, std::vector<vec3> &comp2) 
+{
 	// Find vec's in v1 and not v2
 	for (auto i = v1.begin(); i != v1.end(); i++) {
 		auto j = v2.begin();
@@ -145,10 +145,10 @@ void SpatialMultiRes3d::getComplements(std::vector<vec3> &v1, std::vector<vec3> 
 }
 
 void SpatialMultiRes3d::getIntersectingCells(vec3 cell, int layer,
-	std::unordered_set<vec4> &intersecting)
+	std::unordered_set<Vec4i> &intersecting)
 {
 	// Add this cell
-	intersecting.insert(vec4(cell.x, cell.y, cell.z, layer));
+	intersecting.insert(Vec4i(cell.x, cell.y, cell.z, layer));
 
 	// Add cells below this cell
 	int x = cell.x;
@@ -164,7 +164,7 @@ void SpatialMultiRes3d::getIntersectingCells(vec3 cell, int layer,
 		x = (int)floor(x * LAYER_GROWTH_INVERSE);
 		y = (int)floor(y * LAYER_GROWTH_INVERSE);
 		z = (int)floor(z * LAYER_GROWTH_INVERSE);
-		intersecting.insert(vec4(x, y, z, i));
+		intersecting.insert(Vec4i(x, y, z, i));
 	}
 }
 
@@ -196,7 +196,7 @@ void SpatialMultiRes3d::addObject(CollisionObject *obj)
 		tester->addObject(obj);
 	}
 	// Add to object map
-	objects.emplace(obj, cells);
+	objects.emplace(obj, Cells(layer, cells));
 }
 
 void SpatialMultiRes3d::removeObject(CollisionObject *obj)
@@ -229,7 +229,7 @@ void SpatialMultiRes3d::updateObject(CollisionObject *obj)
 
 void SpatialMultiRes3d::getCollisions(CollisionSet &collisions)
 {
-	for (int layer = 0; layer < active.size; layer++) {
+	for (int layer = 0; layer < active.size(); layer++) {
 		for (auto active_cell : active[layer]) {
 			// Get intra cell collisions
 			active_cell.first->getCollisions(collisions);
@@ -238,7 +238,7 @@ void SpatialMultiRes3d::getCollisions(CollisionSet &collisions)
 			int x = active_cell.second.x;
 			int y = active_cell.second.y;
 			int z = active_cell.second.z;
-			for (int i = layer+1; i < active.size; i++) {
+			for (int i = layer+1; i < active.size(); i++) {
 				x = (int)floor(x * LAYER_GROWTH_INVERSE);
 				y = (int)floor(y * LAYER_GROWTH_INVERSE);
 				z = (int)floor(z * LAYER_GROWTH_INVERSE);
@@ -256,7 +256,7 @@ void SpatialMultiRes3d::getCollisionsWithObject(CollisionSet &collisions, Collis
 	int layer = getObjectLayerIndex(obj);
 	std::vector<vec3> cells;
 	obj->getBVCells(cells, cell_sizes[layer]);
-	std::unordered_set<vec4> intersecting;
+	std::unordered_set<Vec4i> intersecting;
 	for (auto cell : cells) {
 		getIntersectingCells(cell, layer, intersecting);
 	}

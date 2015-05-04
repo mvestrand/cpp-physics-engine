@@ -53,7 +53,8 @@ void AxisSortedList::generateCollisions(std::unordered_set<CollisionPair> &colli
 			sqr_radius = sqr_radius * sqr_radius;
 
 			if (sqr_dist < sqr_radius) {
-				collisions.insert(CollisionPair(*it, obj));
+				// REMOVED TEMPORARILY FOR COMPILING
+				//collisions.insert(CollisionPair(*it, obj));
 			}
 		}
 	}
