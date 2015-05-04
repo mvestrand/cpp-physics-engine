@@ -46,12 +46,32 @@ public:
 int main(int argc, char **argv)
 {
 	SpatialMultiRes3d<AxisSortedList> grid(vec3((real)16.0, (real)16.0, (real)16.0));
-	TestCollisionObject a(1.0, vec3(1.0, 0.0, 5.0));
-	TestCollisionObject b(1.0, vec3(0.0, 0.0, 2.0));
+	TestCollisionObject a(1.0, vec3(0.0, 0.0, 5.0));
+	TestCollisionObject b(1.0, vec3(0.0, 0.0, 0.0));
 	TestCollisionObject c(1.0, vec3(10.0, 0.0, 5.0));
 	grid.addObject(&a);
 	grid.addObject(&b);
 	grid.addObject(&c);
+	vec3 va((real)0.0, (real)0.0, (real)-0.05);
+	vec3 vb((real)0.0, (real)0.0, (real)0.05);
+	vec3 vc((real)0.05, (real)-0.5, (real)-0.5);
+
+	int t = 0;
+	while (t < 10000) {
+		grid.updateObjects();
+		CollisionSet collisions;
+		grid.getCollisions(collisions);
+		for (auto it = collisions.begin(); it != collisions.end(); it++) {
+			printf("collision[%p][%p] at t=%d\n", it->a, it->b, t);
+		}
+		a.pos += va;
+		b.pos += vb;
+		c.pos += vc;
+		t++;
+	}
+
+
+
 	grid.removeObject(&a);
 	grid.removeObject(&b);
 	grid.removeObject(&c);

@@ -52,7 +52,6 @@ private:
 	typedef std::unordered_map<CollisionObject*, Cells> CellMap;
 	typedef PointerGrid3d<Bucket*> GridLayer;
 
-	void updateObjects();
 	void addLayers(int layer);
 	int getObjectLayerIndex(CollisionObject *object);
 	Bucket *addTester(int x, int y, int z, int layer);
@@ -69,6 +68,7 @@ public:
 
 	void getCollisions(CollisionSet &collisions);
 	void getCollisionsWithObject(CollisionSet &collisions, CollisionObject *object);
+	void updateObjects();
 
 	void addObject(CollisionObject *obj);
 	void removeObject(CollisionObject *obj);
