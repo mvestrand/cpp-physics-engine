@@ -35,7 +35,7 @@ public:
 	unsigned int getObjectCount();
 
 	static AxisSortedList *newInstance() { return new AxisSortedList; }
-	static AxisSortedList *deleteInstance(AxisSortedList *inst) { delete inst; }
+	static void deleteInstance(AxisSortedList *inst) { delete inst; }
 
 	std::vector<CollisionObject *> axis;
 };
