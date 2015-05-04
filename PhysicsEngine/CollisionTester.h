@@ -12,11 +12,13 @@ public:
 	virtual void removeObject(CollisionObject *object) {};
 
 	// Gets intra collisions only
-	virtual void getCollisions(std::unordered_set<CollisionPair> &collisions) {};
+	virtual void getCollisions(CollisionSet &collisions) {};
 	// Gets inter collisions only (objects in the same tester do not collide)
-	virtual void getInterCollisions(std::unordered_set<CollisionPair> &collisions, CollisionTester *tester) {};
+	virtual void getInterCollisions(CollisionSet &collisions, CollisionTester *tester) {};
 	// Gets collisions with a single object
-	virtual void getObjectCollisions(std::unordered_set<CollisionPair> &collisions, CollisionObject *object) {};
+	virtual void getObjectCollisions(CollisionSet &collisions, CollisionObject *object) {};
+
+	virtual unsigned int getObjectCount() { return 1; }
 
 	static CollisionTester *newTester();
 	static void deleteTester(CollisionTester *tester);

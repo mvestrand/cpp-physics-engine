@@ -80,14 +80,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AxisSortedList.h" />
+    <ClInclude Include="CollisionObject.h" />
+    <ClInclude Include="CollisionPair.h" />
+    <ClInclude Include="CollisionTester.h" />
     <ClInclude Include="ForceGenerator.h" />
     <ClInclude Include="PointerGrid2d.h" />
-    <ClInclude Include="MultiResGrid.h" />
     <ClInclude Include="PhysicsMath.h" />
     <ClInclude Include="PhysicsWorld.h" />
     <ClInclude Include="PointerGrid3d.h" />
     <ClInclude Include="RigidBody.h" />
-    <ClInclude Include="SpatialGrid2d.h" />
+    <ClInclude Include="SpatialMultiRes3d.h" />
     <ClInclude Include="SphereBVH.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -95,10 +97,9 @@
   <ItemGroup>
     <ClCompile Include="AxisSortedList.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="MultiResGrid.cpp" />
     <ClCompile Include="PhysicsWorld.cpp" />
     <ClCompile Include="RigidBody.cpp" />
-    <ClCompile Include="SpatialGrid2d.cpp" />
+    <ClCompile Include="SpatialMultiRes3d.cpp" />
     <ClCompile Include="SphereBVH.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

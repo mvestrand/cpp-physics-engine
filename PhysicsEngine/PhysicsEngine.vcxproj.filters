@@ -39,12 +39,6 @@
     <ClInclude Include="SphereBVH.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MultiResGrid.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SpatialGrid2d.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="PointerGrid2d.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -52,6 +46,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PointerGrid3d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionPair.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SpatialMultiRes3d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionTester.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -68,16 +74,13 @@
     <ClCompile Include="SphereBVH.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MultiResGrid.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SpatialGrid2d.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="AxisSortedList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpatialMultiRes3d.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

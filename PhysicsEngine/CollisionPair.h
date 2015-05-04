@@ -2,6 +2,8 @@
 
 #include <assert.h>
 
+#include <unordered_set>
+
 #include "CollisionObject.h"
 #include "PhysicsMath.h"
 
@@ -13,7 +15,7 @@ public:
 
 class CollisionPair {
 public:
-	CollisionPair(CollidableSphere *ptr1, CollidableSphere *ptr2){
+	CollisionPair(CollisionObject *ptr1, CollisionObject *ptr2){
 		assert(ptr1 != ptr2);
 		if (ptr1 < ptr2) {
 			a = ptr1;
@@ -29,9 +31,11 @@ public:
 		return (a == other.a && b == other.b);
 	}
 
-	CollidableSphere *a;
-	CollidableSphere *b;
+	CollisionObject *a;
+	CollisionObject *b;
 };
+
+typedef std::unordered_set<CollisionPair> CollisionSet;
 
 namespace std
 {
