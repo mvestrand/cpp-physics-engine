@@ -1,4 +1,4 @@
-This is a basic physics engine implemented while reading through the book *Game Physics Engine Development*. 
+This is a basic physics engine implemented while reading through the book *Game Physics Engine Development*.
 
 
 
